@@ -17,7 +17,11 @@
 			"main.ts",
 			"index.html"
 		  ]
+		},
+		"vscode": {
+			"extensions": [
+				"Angular.ng-template"
+			]
 		}
-	  }
-	  
+	  },	  
 }
