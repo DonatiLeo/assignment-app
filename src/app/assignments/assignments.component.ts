@@ -10,12 +10,12 @@ export class AssignmentsComponent implements OnInit {
   titre : String = "Mon application Angular sur les assignments"
   assignments = [
     {
-      nom: "Vive les maths",
-      dateDeRendu: new Date('2021-03-01'),
+      nom: "Devoir de Maths",
+      dateDeRendu: new Date('2024-03-01'),
       rendu: true
     },
     {
-      nom: "Vive la physique",
+      nom: "TP1 de Java",
       dateDeRendu: new Date('2023-03-05'),
       rendu: false
     },
