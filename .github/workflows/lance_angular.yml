@@ -1,5 +1,5 @@
 name: lance angular sur Pages
-run-name: Projet de ${{ github.actor }} 
+run-name: Projet Angular de ${{ github.actor }} 
 on:
   push:
     branches:
