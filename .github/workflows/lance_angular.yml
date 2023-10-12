@@ -1,6 +1,9 @@
 name: lance angular sur Pages
 run-name: Projet de ${{ github.actor }} 
-on: [push]
+on:
+  push:
+    branches:
+    - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
