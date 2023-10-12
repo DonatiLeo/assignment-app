@@ -1,4 +1,4 @@
-name: lelance angular
+name: lance angular
 run-name: Projet de ${{ github.actor }} 
 on: [push]
 jobs:
@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '19'
+          node-version: latest
       - run: npm install -g @angular/cli
       - run: ng serve
