@@ -17,7 +17,7 @@ jobs:
         run: npm install
           
       - name: build
-        run: ng build
+        run: npm run build:prod
 
       - name: Deploy
         if: success()
