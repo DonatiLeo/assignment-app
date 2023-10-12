@@ -1,0 +1,33 @@
+name: lance encore angular sur Pages
+run-name: Projet de ${{ github.actor }} 
+on:
+  push:
+    branches:
+    - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name : checkout
+        uses: actions/checkout@v4
+        
+      - name: set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          
+      - name : install dependencies
+        run: npm install
+          
+      - name: build
+        run: npm run build:prod
+
+      - name: Deploy
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/assignment-app
+          enable_jekyll: true
