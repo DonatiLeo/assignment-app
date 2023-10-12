@@ -3,7 +3,7 @@ run-name: Projet de ${{ github.actor }}
 on:
   push:
     branches:
-    - main
+    - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
