@@ -10,5 +10,6 @@ jobs:
         with:
           node-version: latest
       - run: npm install -g @angular/cli
+      - run: npm install
       - run: ng build
       - run: ng serve
