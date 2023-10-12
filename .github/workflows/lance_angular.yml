@@ -1,15 +1,28 @@
-name: lance angular
+name: lance angular sur Pages
 run-name: Projet de ${{ github.actor }} 
 on: [push]
 jobs:
-  lance-angular:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name : checkout
+        uses: actions/checkout@v4
+        
+      - name: set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: latest
-      - run: npm install -g @angular/cli
-      - run: npm install
-      - run: ng build
+          
+      - name : install dependencies
+        run: npm install
+          
+      - name: build
+        run: ng build
 
+      - name: Deploy
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/angular-github-actions
+          enable_jekyll: true
