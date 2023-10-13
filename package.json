@@ -10,7 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:prod": "ng build --configuration production --base-href https://DonatiLeo.github.io/angular-github-actions/"
+    "build:prod": "ng build --configuration production --base-href http://DonatiLeo.github.io/angular-github-actions/"
   },
   "private": true,
   "dependencies": {
