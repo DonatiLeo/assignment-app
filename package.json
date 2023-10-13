@@ -1,6 +1,10 @@
 {
   "name": "assignment-app",
   "version": "0.0.0",
+  "description": "Angular App hosted on GitHub Pages using GitHub Actions.",
+  "author": "Leo Donati from Rodrigo Kamada <rodrigo@kamada.com.br>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
